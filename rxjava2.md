@@ -1,10 +1,10 @@
 为了简化下面的代码，先定义下面这样的几个函数
 ```
-public static void p(String s) { // 我承认出现这样的函数是因为我太懒了 =.=
+public void p(String s) { // 我承认出现这样的函数是因为我太懒了 =.=
     System.out.println(s);
 }
 
-public static Observer<Integer> getObserver(int n) {
+public Observer<Integer> getObserver(int n) {
     return new Observer<Integer>() {
         @Override
         public void onSubscribe(Disposable d) {
@@ -30,7 +30,7 @@ public static Observer<Integer> getObserver(int n) {
     };
 }
 
-public static Observer<List<Integer>> getListObserver(int n) {
+public Observer<List<Integer>> getListObserver(int n) {
     return new Observer<List<Integer>>() {
         @Override
         public void onSubscribe(Disposable d) {
@@ -138,15 +138,13 @@ Thread.sleep(10000);
 
 
 
-## AsyncObject 
-![AsyncObject](https://raw.githubusercontent.com/wiki/ReactiveX/RxJava/images/rx-operators/S.AsyncSubject.png)  
+## AsyncSubject 
+![AsyncSubject](https://raw.githubusercontent.com/wiki/ReactiveX/RxJava/images/rx-operators/S.AsyncSubject.png)  
 
 [doc](http://reactivex.io/RxJava/javadoc/rx/subjects/AsyncSubject.html)  
 
 ```
-
-AsyncObject<Interger> subscriber = new AsyncObject();
-
+AsyncSubject<Integer> subscriber = AsyncSubject.create();
 subscriber.subscribe(getObserver(1));
 subscriber.onNext(1);
 

@@ -1,4 +1,4 @@
-package cn.xujifa.rxjavademo.func;
+package cn.xujifa.rxjavademo.operator;
 
 import cn.xujifa.rxjavademo.Base;
 import io.reactivex.Observable;
@@ -6,7 +6,7 @@ import io.reactivex.Observable;
 /**
  * Created by xujifa on 2017/2/19.
  */
-public class ConcatFunc extends Base {
+public class ConcatOperator extends Base {
     @Override
     public void go() {
 

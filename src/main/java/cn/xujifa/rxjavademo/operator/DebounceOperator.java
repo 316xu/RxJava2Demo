@@ -1,4 +1,4 @@
-package cn.xujifa.rxjavademo.func;
+package cn.xujifa.rxjavademo.operator;
 
 import cn.xujifa.rxjavademo.Base;
 import io.reactivex.Observable;
@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by xujifa on 2017/2/19.
  */
-public class DebounceFunc extends Base{
+public class DebounceOperator extends Base{
 
     @Override
     public void go() {
